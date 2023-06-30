@@ -36,7 +36,6 @@ int		ft_puhex(char *padding, unsigned int n, \
 ssize_t *res, char flag);
 int		ft_printptr(char *padding, unsigned long n, ssize_t *res, char flag);
 void	ft_printstr(char *padding, char *s, ssize_t *res, char flag);
-void	ft_free(void *ptr);
 int		ft_max(int nbr1, int nbr2);
 int		ft_eval_specifier(const char *format, t_arg *arg, ssize_t *res, int *i);
 int		ft_nbrlen(unsigned long num, int base);
