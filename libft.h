@@ -55,6 +55,7 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_printf(const char *format, ...);
 
 char	*get_next_line(int fd);
+void	ft_free(void *ptr);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
