@@ -64,6 +64,9 @@ char	*get_next_line(int fd);
 
 void	ft_free(void *ptr);
 void	ft_free_split(char **str);
+void	ft_free_int_array(int **arr, int rows);
+
+int		**ft_make_int_array(int rows, int cols);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));

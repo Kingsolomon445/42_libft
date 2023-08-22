@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_split.c                                   :+:      :+:    :+:   */
+/*   ft_free_int_array.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ofadahun <ofadahun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,12 +12,15 @@
 
 #include "../libft.h"
 
-int	ft_count_split(char **splitted)
+void	ft_free_int_array(int **arr, int rows)
 {
 	int	i;
 
 	i = 0;
-	while (splitted[i])
+	while (i < rows)
+	{
+		ft_free(arr[i]);
 		i++;
-	return (i);
+	}
+	ft_free(arr);
 }
