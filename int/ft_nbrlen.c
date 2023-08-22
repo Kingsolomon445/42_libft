@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils_one.c                              :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ofadahun <ofadahun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/18 15:00:47 by ofadahun          #+#    #+#             */
-/*   Updated: 2023/04/21 12:38:53 by ofadahun         ###   ########.fr       */
+/*   Created: 2023/03/21 16:07:50 by ofadahun          #+#    #+#             */
+/*   Updated: 2023/03/22 20:17:45 by ofadahun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
-void	ft_free(void *ptr)
+int	ft_nbrlen(unsigned long num, int base)
 {
-	if (ptr)
+	int	len;
+
+	len = 0;
+	if (num == 0)
+		return (1);
+	while (num > 0)
 	{
-		free(ptr);
-		ptr = NULL;
+		len++;
+		num /= base;
 	}
-}
-
-int	ft_max(int nbr1, int nbr2)
-{
-	if (nbr1 > nbr2)
-		return (nbr1);
-	return (nbr2);
+	return (len);
 }
