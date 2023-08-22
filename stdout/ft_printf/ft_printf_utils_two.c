@@ -12,21 +12,6 @@
 
 #include "ft_printf.h"
 
-int	ft_nbrlen(unsigned long num, int base)
-{
-	int	len;
-
-	len = 0;
-	if (num == 0)
-		return (1);
-	while (num > 0)
-	{
-		len++;
-		num /= base;
-	}
-	return (len);
-}
-
 char	*ft_itoa_lowerhex(unsigned long n)
 {
 	int		len;
