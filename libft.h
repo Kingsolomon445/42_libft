@@ -26,6 +26,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 char	*ft_itoa(int n);
 int 	ft_toupper(int c);
 int 	ft_tolower(int c);
@@ -60,10 +61,14 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_printf(const char *format, ...);
 
 char	*get_next_line(int fd);
+
 void	ft_free(void *ptr);
+void	ft_free_split(char **str);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+int		ft_count_split(char **splitted);
 
 typedef struct s_list
 {
